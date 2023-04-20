@@ -1,0 +1,23 @@
+kind: imagerunner
+apiVersion: v1alpha
+
+suites:
+  - name: "HoppScotch GET method tests"
+    image: cbsl/hopp:0.0.1
+    timeout: 10m
+    workload: other
+    artifacts:
+      - "/app/artifacts/test-results"
+    files:
+      - src: tests/get-requests.json
+        dst: /app/tests/get-requests.json
+
+    entrypoint: hopp test tests/get-requests.json
+
+artifacts:
+  cleanup: false
+  download:
+    when: always
+    match:
+      - '*'
+    directory: ./artifacts
