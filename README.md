@@ -1,1 +1,1 @@
-# saucectl-hoppscotch-example-cb
+saucectl-hoppscotch-example-cb
