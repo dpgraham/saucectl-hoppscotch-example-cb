@@ -1,0 +1,151 @@
+[
+  {
+    "name": "HS-echo",
+    "v": 1,
+    "requests": [
+      {
+        "v": "1",
+        "testScript": "pw.test(\"\", () => {\n  const user = pw.response.body.data;\n  pw.expect(user.first_name).toBe(\"Byron\");\n  pw.expect(user.first_name).toBeType(\"string\");\n});\n",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "headers": [],
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "method": "GET",
+        "params": [],
+        "endpoint": "https://reqres.in/api/users/10",
+        "preRequestScript": "",
+        "name": "get-1"
+      },
+      {
+        "preRequestScript": "",
+        "method": "GET",
+        "params": [],
+        "body": {
+          "body": null,
+          "contentType": null
+        },
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "v": "1",
+        "testScript": "\n\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});\n\n// Check JSON response property\npw.test(\"Check JSON response property\", ()=> {\n    pw.expect(pw.response.body.method).toBe(\"GET\");\n});",
+        "name": "get-2",
+        "headers": [],
+        "endpoint": "https://echo.hoppscotch.io"
+      },
+      {
+        "name": "get-3",
+        "preRequestScript": "",
+        "headers": [],
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "params": [],
+        "endpoint": "https://www.httpbin.org/status/200",
+        "v": "1",
+        "body": {
+          "body": null,
+          "contentType": null
+        },
+        "testScript": "pw.test(\"Response is ok\", () => {\n  pw.expect(pw.response.status).toBeLevel2xx();\n});\n",
+        "method": "GET"
+      },
+      {
+        "name": "get-4",
+        "params": [],
+        "endpoint": "https://rickandmortyapi.com/api/character",
+        "preRequestScript": "",
+        "testScript": "\n\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});\n\n// Check status code is 2xx\npw.test(\"Status code is 2xx\", ()=> {\n    pw.expect(pw.response.status).toBeLevel2xx();\n});\n",
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "v": "1",
+        "auth": {
+          "addTo": "Headers",
+          "authActive": true,
+          "key": "",
+          "authType": "none",
+          "value": ""
+        },
+        "method": "GET",
+        "headers": []
+      },
+      {
+        "endpoint": "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=3",
+        "v": "1",
+        "headers": [],
+        "method": "GET",
+        "preRequestScript": "",
+        "body": {
+          "body": null,
+          "contentType": null
+        },
+        "params": [],
+        "name": "get-5",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "testScript": "\n\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});"
+      }
+    ],
+    "folders": []
+  },
+  {
+    "name": "RickAndMortyAPI",
+    "folders": [],
+    "requests": [
+      {
+        "params": [],
+        "body": {
+          "body": null,
+          "contentType": null
+        },
+        "endpoint": "https://rickandmortyapi.com/api/character",
+        "v": "1",
+        "auth": {
+          "authType": "none",
+          "value": "",
+          "key": "",
+          "authActive": true,
+          "addTo": "Headers"
+        },
+        "name": "character",
+        "method": "GET",
+        "headers": [],
+        "testScript": "\n\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});\n\n// Check status code is 2xx\npw.test(\"Status code is 2xx\", ()=> {\n    pw.expect(pw.response.status).toBeLevel2xx();\n});\n\n",
+        "preRequestScript": ""
+      },
+      {
+        "v": "1",
+        "method": "GET",
+        "body": {
+          "body": null,
+          "contentType": null
+        },
+        "name": "location",
+        "endpoint": "https://rickandmortyapi.com/api/location",
+        "preRequestScript": "",
+        "auth": {
+          "addTo": "Headers",
+          "key": "",
+          "value": "",
+          "authActive": true,
+          "authType": "none"
+        },
+        "testScript": "\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});\n\n\n// Check status code is 2xx\npw.test(\"Status code is 2xx\", ()=> {\n    pw.expect(pw.response.status).toBeLevel2xx();\n});\n\n",
+        "headers": [],
+        "params": []
+      }
+    ],
+    "v": 1
+  }
+]
