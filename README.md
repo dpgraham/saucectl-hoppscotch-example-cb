@@ -57,7 +57,7 @@ You have the following options:
 - HOSTNAME: your Sauce Labs data center
 - RUNID: your test ```runid``` shown during test execution on the terminal
 
-OpenAPI spec can be found here: https://github.com/saucelabs/hostedrunner-api/blob/main/specs/openapi_v1alpha1.yaml
+OpenAPI spec can be found [here](https://github.com/saucelabs/hostedrunner-api/blob/main/specs/openapi_v1alpha1.yaml).
 
 ---
 
