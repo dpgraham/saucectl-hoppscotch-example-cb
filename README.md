@@ -31,6 +31,9 @@ You can do so by using the configure option, detailed information is available [
 ```saucectl configure```
 
 ### How do I run tests using ```saucectl```?
+
+![running example](assets/hoppscotch-demo.gif)
+
 ```saucectl``` runs tests for you via the following command. No matter which framework or type of test you run, the command remains the same. 
 
 Before running the command, please ensure this repo is your working directory in your terminal session as ```./sauce/config.yml``` has the logic and sequence in which tests need to be run.  
