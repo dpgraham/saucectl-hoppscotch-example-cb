@@ -52,15 +52,13 @@ You have the following options:
   - Hoppscotch test result output is shown that gives you a detailed view 
   - a test execution summary is shown by ```saucectl```
 2. Based on the ```config.yml``` in this repo, your test results will also be stored in ```./artifacts```
-3. You can view test results in your Sauce Labs account under Automated*
 
-*Since Sauce Orchestrate is in beta at the moment, this functionality is limited. A temporary option is to query our API endpoint with ```runid``` and your Sauce Labs credentials. 
+You can also query our API endpoint with ```runid``` and your Sauce Labs credentials. OpenAPI spec can be found [here](https://github.com/saucelabs/hostedrunner-api/blob/main/specs/openapi_v1alpha1.yaml).
 
 ```https://api.{{HOSTNAME}}/v1alpha1/hosted/image/runners/{{RUNID}}```
 - HOSTNAME: your Sauce Labs data center
 - RUNID: your test ```runid``` shown during test execution on the terminal
 
-OpenAPI spec can be found [here](https://github.com/saucelabs/hostedrunner-api/blob/main/specs/openapi_v1alpha1.yaml).
 
 ---
 
