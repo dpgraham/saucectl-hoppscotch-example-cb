@@ -1,4 +1,4 @@
-## saucectl & Hoppscotch example using Hosted Orchestration (Beta) 
+## saucectl & Hoppscotch example using Sauce Orchestrate (Beta) 
 
 ### What is the purpose of this repo?
 The purpose of this repo is to show extensibility of ```saucectl```. 
@@ -7,7 +7,7 @@ Here is an example of [Hoppscotch](https://hoppscotch.io/), an open source API d
 
 This repo contains a simple set of ```GET``` method requests and test assertions created using HoppScotch, which can be run using ```saucectl```. 
 
-Behind the scenes, the tests and the Hoppscotch CLI is packaged in a Hoppscotch docker image that can be run in Sauce Labs cloud, and also as part of your CI pipeline. At the end of the test run, test result output from Hoppscotch is shown on the terminal in addition to a test exectution summary from ```saucectl```. The docker container is run in Sauce Labs cloud using our [Hosted Orchestration](https://docs.saucelabs.com/hosted-orchestration/) that is in beta at the moment.
+Behind the scenes, the tests and the Hoppscotch CLI is packaged in a Hoppscotch docker image that can be run in Sauce Labs cloud, and also as part of your CI pipeline. At the end of the test run, test result output from Hoppscotch is shown on the terminal in addition to a test exectution summary from ```saucectl```. The docker container is run in Sauce Labs cloud using our [Sauce Orchestrate](https://docs.saucelabs.com/hosted-orchestration/) that is in beta at the moment.
 
 #### What are the pre-requisites?
 To run this test suite, you will need 
@@ -50,7 +50,7 @@ You have the following options:
 2. Based on the ```config.yml``` in this repo, your test results will also be stored in ```./artifacts```
 3. You can view test results in your Sauce Labs account under Automated*
 
-*Since Hosted Orchestration is in beta at the moment, this functionality is limited. A temporary option is to query our API endpoint with ```runid``` and your Sauce Labs credentials. 
+*Since Sauce Orchestrate is in beta at the moment, this functionality is limited. A temporary option is to query our API endpoint with ```runid``` and your Sauce Labs credentials. 
 
 ```https://api.{{HOSTNAME}}/v1alpha1/hosted/image/runners/{{RUNID}}```
 - HOSTNAME: your Sauce Labs data center
