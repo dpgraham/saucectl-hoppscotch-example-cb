@@ -11,6 +11,7 @@ Behind the scenes, the tests and the Hoppscotch CLI is packaged in a Hoppscotch 
 
 #### What are the pre-requisites?
 To run this test suite, you will need 
+- docker installed and working, in case you would like to rebuild the image
 - ```saucectl``` installed and configured to use your Sauce Labs credentials
 - this repo cloned or checked out to your local machine
 
@@ -55,6 +56,8 @@ You have the following options:
 ```https://api.{{HOSTNAME}}/v1alpha1/hosted/image/runners/{{RUNID}}```
 - HOSTNAME: your Sauce Labs data center
 - RUNID: your test ```runid``` shown during test execution on the terminal
+
+OpenAPI spec can be found here: https://github.com/saucelabs/hostedrunner-api/blob/main/specs/openapi_v1alpha1.yaml
 
 ---
 
