@@ -7,7 +7,7 @@ Here is an example of [Hoppscotch](https://hoppscotch.io/), an open source API d
 
 This repo contains a simple set of ```GET``` method requests and test assertions created using HoppScotch, which can be run using ```saucectl```. 
 
-Behind the scenes, the tests and the Hoppscotch CLI is packaged in a Hoppscotch docker image that can be run in Sauce Labs cloud, and also as part of your CI pipeline. At the end of the test run, test result output from Hoppscotch is shown on the terminal in addition to a test exectution summary from ```saucectl```. The docker container is run in Sauce Labs cloud using our [Sauce Orchestrate](https://docs.saucelabs.com/hosted-orchestration/) that is in beta at the moment.
+Behind the scenes, the tests and the Hoppscotch CLI is packaged in a Hoppscotch docker image that can be run in Sauce Labs cloud, and also as part of your CI pipeline. At the end of the test run, test result output from Hoppscotch is shown on the terminal in addition to a test execution summary from ```saucectl```. The docker container is run in Sauce Labs cloud using our [Sauce Orchestrate](https://docs.saucelabs.com/hosted-orchestration/) that is in beta at the moment.
 
 #### What are the pre-requisites?
 To run this test suite, you will need 
