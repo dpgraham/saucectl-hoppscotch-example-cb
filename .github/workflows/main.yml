@@ -60,5 +60,5 @@ jobs:
         env:
           SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
           SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
-          HOPP_IMAGE: ${{ steps.build_docker_image.steps.meta.outputs.tags }}
+          HOPP_IMAGE: ${{ needs.build_docker_image.outputs.tags }}
 
