@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  build:
+  hopp-without-saucectl:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,3 +15,14 @@ jobs:
           node-version: 18.x
       - run: npm install -g @hoppscotch/cli
       - run: hopp test tests/get-requests.json
+  hopp-with-saucectl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js v18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - run: npm install -g saucectl
+      - run: saucectl run --config-file .sauce/config.yml
+
