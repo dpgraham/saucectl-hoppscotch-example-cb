@@ -79,7 +79,7 @@
         "headers": []
       },
       {
-        "endpoint": "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=3",
+        "endpoint": "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=4",
         "v": "1",
         "headers": [],
         "method": "GET",
