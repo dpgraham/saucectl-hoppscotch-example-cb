@@ -14,8 +14,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - run: npm install -g @hoppscotch/cli
-      - run: hopp test tests/get-requests.json
+      - run: npm install -g @hoppscotch/cli saucectl
+      - run: hopp test tests/get-requests.json > hopp-logs.log
+      - run: saucectl artifacts upload 74e0ce19355f49e381217e5d0128b166123 hopp-logs.log 
     
   # Sauce Orchestrate
   build_docker_image:
