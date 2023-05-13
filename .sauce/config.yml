@@ -3,7 +3,7 @@ apiVersion: v1alpha
 
 suites:
   - name: "HoppScotch GET method tests"
-    image: cbsl/hopp:0.0.1
+    image: ${HOPP_IMAGE}
     timeout: 10m
     workload: other
     artifacts:
