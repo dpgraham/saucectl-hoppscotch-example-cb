@@ -21,6 +21,9 @@ jobs:
   build_docker_image:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
+    outputs:
+      tags: ${{ steps.meta.outputs.tags }}
+      labels: ${{ steps.meta.outputs.labels }}
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -32,9 +35,6 @@ jobs:
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
-        outputs:
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
         with:
           images: danielpatrickgraham/hopp
       - name: Build and push Docker image
