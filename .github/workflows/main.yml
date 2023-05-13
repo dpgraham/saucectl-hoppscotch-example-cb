@@ -48,7 +48,7 @@ jobs:
 
   hopp-with-saucectl:
     runs-on: ubuntu-latest
-    depends-on: build_docker_image
+    needs: build_docker_image
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js v18.x
