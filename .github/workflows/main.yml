@@ -16,7 +16,7 @@ jobs:
           node-version: 18.x
       - run: npm install -g @hoppscotch/cli saucectl
       - run: hopp test tests/get-requests.json > hopp-logs.log
-      - run: saucectl artifacts upload 74e0ce19355f49e381217e5d0128b166123 hopp-logs.log
+      - run: saucectl artifacts upload 74e0ce19355f49e381217e5d0128b166 hopp-logs.log
         env:
           SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
           SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
