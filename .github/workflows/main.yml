@@ -25,4 +25,7 @@ jobs:
           node-version: 18.x
       - run: npm install -g saucectl
       - run: saucectl run
+```     env:
+          SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
 
